@@ -81,8 +81,8 @@ The application is designed for high-school level academic subjects and offers a
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/ai-viva-examiner.git
-cd ai-viva-examiner
+[git clone https://github.com/your-username/ai-viva-examiner.git
+cd ai-viva-examiner](https://github.com/dhruv25bai11236-hue/AI-VIVA-EXAMINER)
 ```
 
 ### 2. Install Dependencies
