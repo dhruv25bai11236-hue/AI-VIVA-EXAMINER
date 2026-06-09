@@ -1,12 +1,184 @@
-AI Viva Examiner Analyze. Evaluate. Accelerate.AI Viva Examiner is an enterprise-grade, automated oral evaluation desktop application. Built with an attractive, minimalist Neo-Cyber theme, the application allows academic students (10th & 12th standards) to practice their viva voce voice examinations. It dynamically serves structured curriculum questions, handles real-time voice streaming/transcription pipelines, maps answers against complex technical rubrics, and generates an instant performance metric scorecard.🚀 Key FeaturesNeo-Cyber Architecture UI: Overhauled widescreen design featuring interactive glassmorphic sidebar panels, high-contrast dashboard states, and sleek violet/crimson neon states.Asynchronous Audio Capture Pipeline: Completely automated voice recording system utilizing advanced noise calibration algorithms to filter ambient room disruptions.Live Dynamic HUD Clock: Interactive count-down study clock giving the user an active 30-second window to formulate deep conceptual outlines.Real-time Waveform Indicator: Built-in animated sinus canvas showing visual microphone activity feed while the capturing thread listens for voice speech.Matrix Analytics Mapping: Instantly scores linguistic accuracy against core syllabus data benchmarks, grading key terms, syntax depth, and technical density out of 10.0 points.🛠️ Tech Stack & RequirementsThe system relies on a multi-threaded execution model to bridge standard microphone hardware inputs smoothly with a live tkinter graphical user interface wrapper.Core Platform: Python 3.10+GUI Framework: CustomTkinter & Tkinter Canvas APISpeech Processing Engine: SpeechRecognition API & Google Web Speech Engine BackendHardware Interfacing: PyAudio (PortAudio bindings)📦 Installation & Setup Guide1. Clone the WorkspaceEnsure both the main dashboard app and your standalone custom question datasets are located within the same project directory.Bash# Directory Blueprint structure requirement
-├── main.py             # UI Architecture & Voice Pipeline
-└── question_bank.py    # Academic Syllabus Database Matrix
-2. Configure System DependenciesDepending on your platform machine setup, execute the proper system packages before configuring dependencies to prevent internal PyAudio installation failures:Windows Environment:Bashpip install pipwin
+# AI Viva Examiner
+
+## Overview
+AI Viva Examiner is a desktop-based AI-powered viva examination simulator built with Python and CustomTkinter. It generates subject-specific viva questions, provides preparation time, captures spoken answers through a microphone, converts speech to text, and evaluates responses using a keyword-based scoring system.
+
+The application is designed for high-school level academic subjects and offers an interactive user interface with automated assessment and performance reporting.
+
+---
+
+## Features
+
+### Smart Viva Question Generation
+- Generates random viva questions from a predefined academic database.
+- Supports:
+  - Class 10 Subjects
+    - Science
+    - Social Science
+    - English
+  - Class 12 Subjects
+    - Physics
+    - Chemistry
+    - Biology
+    - English
+
+### Automated Viva Workflow
+1. Select class and subject.
+2. Generate a viva question.
+3. Get 30 seconds of preparation time.
+4. Automatic voice recording starts.
+5. Speech is converted to text.
+6. Answer is evaluated automatically.
+7. Score and performance report are displayed.
+
+### Speech Recognition
+- Uses Google Speech Recognition through the `speech_recognition` library.
+- Captures answers directly from the microphone.
+
+### Performance Evaluation
+- Keyword-based answer analysis.
+- Accuracy percentage calculation.
+- Final score out of 10.
+- Performance grading:
+  - Expert Mastery
+  - Good Standard
+  - Needs Work
+
+### Modern User Interface
+- Built using CustomTkinter.
+- Dark theme dashboard.
+- Animated audio wave visualization.
+- Real-time countdown timer.
+- Performance report panel.
+
+---
+
+## Project Structure
+
+```text
+.
+├── main.py              # Main application and UI
+├── question_bank.py     # Academic database and question patterns
+└── README.md            # Project documentation
+```
+
+---
+
+## Technologies Used
+
+- Python 3.x
+- CustomTkinter
+- Tkinter Canvas
+- SpeechRecognition
+- Threading
+- Regular Expressions (re)
+- Math Module
+
+---
+
+## Installation
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/ai-viva-examiner.git
+cd ai-viva-examiner
+```
+
+### 2. Install Dependencies
+
+```bash
+pip install customtkinter SpeechRecognition pyaudio
+```
+
+If PyAudio installation fails:
+
+```bash
+pip install pipwin
 pipwin install pyaudio
-pip install customtkinter speechrecognition
-macOS Environment:Bashbrew install portaudio
-pip install pyaudio customtkinter speechrecognition
-Linux Environment (Ubuntu/Debian):Bashsudo apt-get install portaudio19-dev python3-pyaudio
-pip install pyaudio customtkinter speechrecognition
-🎮 Operational Blueprints (How to Play)Run the boot sequence directly from your terminal workspace:Bashpython main.py
-Configure Credentials: Use the drop-down sidebar selection menus to lock in your specific academic credentials (e.g., 12th Standard $\rightarrow$ Physics).Launch Viva: Hit Start Viva. The engine immediately crawls the dataset patterns, generates a random core subject metric focus, and prints the operational target to the console workspace log.Formulate Ideas: The flashing red digital countdown HUD activates. You have exactly 30 seconds to formulate critical scoring vocabulary terms.Acoustic Recording Capture: At 00:00, the cyan teal wave HUD animation illuminates. Speak clearly into your mic input. The loop allows an extended window to register answers safely.Data Processing: Once you stop speaking, the threads safely close the mic stream, push textual transcript logs to the display board, and render a calculated grade rating down to the performance scorecard!
+```
+
+---
+
+## Running the Project
+
+```bash
+python main.py
+```
+
+---
+
+## How It Works
+
+### Question Generation
+The system randomly selects:
+- A subject
+- A topic from the academic database
+- A question pattern
+
+and generates a viva question.
+
+### Preparation Phase
+A 30-second countdown timer allows students to prepare.
+
+### Voice Capture
+After the timer reaches zero:
+- Microphone recording starts automatically.
+- Speech is converted into text.
+
+### Evaluation
+The system:
+- Extracts keywords from the reference answer.
+- Compares them with the student's response.
+- Calculates:
+  - Accuracy percentage
+  - Word count score
+  - Final marks out of 10
+
+---
+
+## Sample Workflow
+
+```text
+Select Subject
+      ↓
+Generate Question
+      ↓
+30s Preparation Timer
+      ↓
+Voice Recording
+      ↓
+Speech-to-Text
+      ↓
+Evaluation
+      ↓
+Performance Report
+```
+
+---
+
+## Future Improvements
+
+- AI-powered semantic answer evaluation using NLP.
+- GPT-based viva conversations.
+- Database integration for student records.
+- Export reports to PDF.
+- Multi-language support.
+- Teacher dashboard.
+- Online viva mode.
+
+---
+
+## Educational Use Cases
+
+- School viva practice
+- Oral examination preparation
+- Self-assessment
+- Classroom demonstrations
+- Subject revision sessions
+
+---
+
+## Author
+Dhruv Shrivastava
+Developed as an AI-assisted Viva Examination System using Python, CustomTkinter, and Speech Recognition.
